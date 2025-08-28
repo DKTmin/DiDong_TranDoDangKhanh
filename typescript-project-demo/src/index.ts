@@ -10,6 +10,10 @@ import { Product } from "./bai08";
 import { Account } from './bai10';
 import { Cat11, Dog11 } from './bai11';
 import { Bird, Fish } from './bai12';
+import { Circle, Square } from './bai13';
+import { Developer, Manager } from './bai14';
+import { Library } from './bai15';
+import { Box } from './bai16';
 
 
 //bai01
@@ -68,19 +72,47 @@ import { Bird, Fish } from './bai12';
 // conMeo.meow();
 
 // bai12
-var conChim = new Bird("Chim bo cau");
-conChim.soud();
-var conCa = new Fish("Ca Tra", "nuoc ngot");
-conCa.howToSwim();
-
-
-
-
+// var conChim = new Bird("Chim bo cau");
+// conChim.soud();
+// var conCa = new Fish("Ca Tra", "nuoc ngot");
+// conCa.howToSwim();
 
 // bai13
+// var hinh = new Square(4, 5);
+// var hinh1 = new Circle(3);
+// console.log(hinh.area());
+// console.log(hinh1.area());
+
+
 // bai14
+// var manager = new Manager("Khanh", "0399026084", 100000);
+// var dev = new Developer("Nguyet", "0352626114", 100000);
+// console.log(manager.tienLuong())
+// console.log(dev.tienLuong())
+
 // bai15
+// var book = new Book("Giac Mo Trua", "Nhat Kim Anh", 2024)
+// var book1 = new Book("Clean Code", "Robert C. Martin", 2025);
+// var book2 = new Book("The Pragmatic Programmer", "Andrew Hunt", 2025);
+// var user = new User("Khanh");
+// var lib = new Library;
+// lib.addBook(book);
+// lib.addBook(book1);
+// lib.addBook(book2);
+// lib.addUser(user);
+// lib.listBooks();
+
 // bai16
+// Box chứa số
+const numberBox = new Box<number>(123);
+console.log(numberBox.getValue()); // 123
+
+// Box chứa chuỗi
+const stringBox = new Box<string>("Hello TypeScript");
+console.log(stringBox.getValue()); // "Hello TypeScript"
+
+
+
 // bai17
 // bai18
 // bai19
