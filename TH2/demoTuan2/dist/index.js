@@ -1,6 +1,15 @@
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const bai09_1 = require("./bai09");
+const bai11_1 = require("./bai11");
 //bai01 
 // myPromiseBai01.then((message) => {
 //   console.log("Kết quả:", message);
@@ -57,12 +66,23 @@ const bai09_1 = require("./bai09");
 // bai08
 // promiseChain(2).then(console.log)
 // bai09
-(0, bai09_1.fillterArrayAfter1Second)([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-    .then(evenNum => {
-    console.log("EvenNumber: ", evenNum);
-});
+// fillterArrayAfter1Second([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+//     .then(evenNum => {
+//         console.log("EvenNumber: ", evenNum);
+//     })
 // bai10
+// printRepose(true)
+// .then(result => console.log("Ket qua", result))
+// .catch(error => console.error("Loi", error))
+// .then(() => console.log("Done")); 
 // bai11
+function test() {
+    return __awaiter(this, void 0, void 0, function* () {
+        const result = yield (0, bai11_1.myPromiseBai11)();
+        console.log(result);
+    });
+}
+test();
 // bai12
 // bai13
 // bai14

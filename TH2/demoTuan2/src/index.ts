@@ -7,6 +7,8 @@ import { simulateTaskBai6 } from "./bai06";
 import { simulateTaskBai7 } from "./bai07";
 import { promiseChain } from "./bai08";
 import { fillterArrayAfter1Second } from "./bai09";
+import { printRepose } from "./bai10";
+import { myPromiseBai11 } from "./bai11";
 
 //bai01 
 // myPromiseBai01.then((message) => {
@@ -74,13 +76,24 @@ import { fillterArrayAfter1Second } from "./bai09";
 // promiseChain(2).then(console.log)
 
 // bai09
-fillterArrayAfter1Second([1,2,3,4,5,6,7,8,9,10])
-.then(evenNum => { 
-    console.log("EvenNumber: ", evenNum); 
-})
+// fillterArrayAfter1Second([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+//     .then(evenNum => {
+//         console.log("EvenNumber: ", evenNum);
+//     })
 
 // bai10
+// printRepose(true)
+// .then(result => console.log("Ket qua", result))
+// .catch(error => console.error("Loi", error))
+// .then(() => console.log("Done")); 
+
 // bai11
+async function test() {
+    const result = await myPromiseBai11(); 
+    console.log(result); 
+}
+test()
+
 // bai12
 // bai13
 // bai14
