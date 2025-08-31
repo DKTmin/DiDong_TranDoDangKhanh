@@ -9,6 +9,15 @@ import { promiseChain } from "./bai08";
 import { fillterArrayAfter1Second } from "./bai09";
 import { printRepose } from "./bai10";
 import { myPromiseBai11 } from "./bai11";
+import { runTask } from "./bai12";
+import { runTask_Bai13 } from "./bai13";
+import { runTask_Bai14 } from "./bai14";
+import { runTask_Bai15 } from "./bai15";
+import { runtask_Bai16 } from "./bai16";
+import { runTask_Bai17 } from "./bai17";
+import { runTask_Bai18 } from "./bai18";
+import { runTask_Bai19 } from "./bai19";
+import { runTask_Bai20 } from "./bai20";
 
 //bai01 
 // myPromiseBai01.then((message) => {
@@ -88,21 +97,39 @@ import { myPromiseBai11 } from "./bai11";
 // .then(() => console.log("Done")); 
 
 // bai11
-async function test() {
-    const result = await myPromiseBai11(); 
-    console.log(result); 
-}
-test()
+// async function test() {
+//     const result = await myPromiseBai11(); 
+//     console.log(result); 
+// }
+// test()
 
 // bai12
+// runTask(); 
+
 // bai13
+// runTask_Bai13()
+
 // bai14
+// runTask_Bai14(30)
+
 // bai15
+// runTask_Bai15(); 
+
 // bai16
+// runtask_Bai16(); 
+
 // bai17
+// runTask_Bai17(); 
+
 // bai18
+// runTask_Bai18(); 
+
 // bai19
+// runTask_Bai19(); 
+
 // bai20
+runTask_Bai20(); 
+
 // bai21
 // bai22
 // bai23

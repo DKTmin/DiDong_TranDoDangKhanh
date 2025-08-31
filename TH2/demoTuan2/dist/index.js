@@ -1,15 +1,6 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const bai11_1 = require("./bai11");
+const bai20_1 = require("./bai20");
 //bai01 
 // myPromiseBai01.then((message) => {
 //   console.log("Kết quả:", message);
@@ -76,22 +67,29 @@ const bai11_1 = require("./bai11");
 // .catch(error => console.error("Loi", error))
 // .then(() => console.log("Done")); 
 // bai11
-function test() {
-    return __awaiter(this, void 0, void 0, function* () {
-        const result = yield (0, bai11_1.myPromiseBai11)();
-        console.log(result);
-    });
-}
-test();
+// async function test() {
+//     const result = await myPromiseBai11(); 
+//     console.log(result); 
+// }
+// test()
 // bai12
+// runTask(); 
 // bai13
+// runTask_Bai13()
 // bai14
+// runTask_Bai14(30)
 // bai15
+// runTask_Bai15(); 
 // bai16
+// runtask_Bai16(); 
 // bai17
+// runTask_Bai17(); 
 // bai18
+// runTask_Bai18(); 
 // bai19
+// runTask_Bai19(); 
 // bai20
+(0, bai20_1.runTask_Bai20)();
 // bai21
 // bai22
 // bai23
