@@ -1,0 +1,49 @@
+import React from 'react';
+import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
+
+const Tuan3 = () => {
+  return (
+    <View
+      style={{
+        flex: 1,
+      }}>
+      <View style={styles.container}>
+        <Image source={require('./ellipse.png')} />
+      </View>
+
+      <View style={styles.container}>
+        <View style={styles.container}>
+          <Text style={{ fontSize: 25, fontWeight: 'bold' }}>GROW</Text>
+          <Text style={{ fontSize: 25, fontWeight: 'bold' }}>
+            YOUR BUSINESS
+          </Text>
+        </View>
+        <View style={styles.container}>
+          <Text style={{ fontSize: 14,  textAlign: 'center',fontWeight: 'bold' }}>
+            We will help you to grow your business using online server
+          </Text>
+        </View>
+      </View>
+
+      <View style={{ flex: 1, backgroundColor: '#08ccfc',  justifyContent: 'space-around', flexDirection: 'row', alignItems: 'center'}}>
+        <TouchableOpacity style={{backgroundColor: '#e3c000', height: 40, width: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center'}}>
+          <Text style = {{fontWeight: 'bold'}}>LOGIN</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={{backgroundColor: '#e3c000', height: 40, width: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center'}}>
+          <Text style = {{fontWeight: 'bold'}}>SIGN UP</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
+    backgroundColor: '#08ccfc',
+  },
+});
+
+export default Tuan3;

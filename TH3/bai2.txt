@@ -1,0 +1,77 @@
+import React from 'react';
+import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+
+const Tuan3 = () => {
+  return (
+    <View
+      style={{
+        flex: 1,
+      }}>
+
+      <View style={styles.container}>
+        <Image source={require('./ellipse.png')} />
+      </View>
+      <LinearGradient
+        // Background Linear Gradient
+        colors={['rgba(255,255,255,0.8)', 'transparent']}
+        style={{ position: 'absolute', left: 0, right: 0, top: 0, height: 300 }}/>
+
+      <View style={styles.container}>
+        <View style={styles.container}>
+          <Text style={{ fontSize: 25, fontWeight: 'bold' }}>GROW</Text>
+          <Text style={{ fontSize: 25, fontWeight: 'bold' }}>
+            YOUR BUSINESS
+          </Text>
+        </View>
+
+        <View style={styles.container}>
+          <Text
+            style={{ fontSize: 14, textAlign: 'center', fontWeight: 'bold' }}>
+            We will help you to grow your business using online server
+          </Text>
+        </View>
+
+        <View style={styles.container}>
+          <View
+            style={{
+              flex: 1,
+              backgroundColor: '#08ccfc',
+              justifyContent: 'space-around',
+              flexDirection: 'row',
+              alignItems: 'center',
+            }}>
+            <TouchableOpacity style={styles.botton}>
+              <Text style={{ fontWeight: 'bold' }}>LOGIN</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.botton}>
+              <Text style={{ fontWeight: 'bold' }}>SIGN UP</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </View>
+
+      <View style={styles.container}>
+        <Text style={{ fontSize: 18, fontWeight: 'bold' }}>HOW WE WORK?</Text>
+      </View>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
+    backgroundColor: '#08ccfc',
+  },
+  botton: {
+    backgroundColor: '#e3c000',
+    height: 40,
+    width: 100,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
+
+export default Tuan3;
