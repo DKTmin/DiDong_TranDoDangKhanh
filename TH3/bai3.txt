@@ -1,0 +1,109 @@
+import React from 'react';
+import { Input } from 'react-native-elements';
+import {
+  Text,
+  View,
+  Image,
+  StyleSheet,
+  TouchableOpacity,
+  TextInput,
+} from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+import { MaterialIcons } from '@expo/vector-icons';
+
+const Bai3 = () => {
+  return (
+    <View style={{ flex: 1, backgroundColor: '#08ccfc' }}>
+      <LinearGradient
+        colors={['rgba(255,255,255,0.8)', 'rgba(255,255,255,0.8)', '#08ccfc']}
+        locations={[0, 0.8, 1]} // 0 = top, 1 = bottom
+        style={{
+          position: 'absolute',
+          left: 0,
+          right: 0,
+          top: 0,
+          bottom: 0,
+        }}
+      />
+      <View style={{ flex: 2, alignItems: 'center', justifyContent: 'center' }}>
+        <Image style={styles.tinyLogo}
+          source={{
+            uri: 'https://snack-code-uploads.s3.us-west-1.amazonaws.com/~asset/816b9eddcc090f2078a79125c9cb07cd',
+          }} />
+      </View>
+      // ------------------------------
+      <View
+        style={{
+          flex: 3,
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}>
+        <View
+          style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+          <View
+            style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Text style={{ fontWeight: 'bold', fontSize: 25 }}>FORGET</Text>
+            <Text style={{ fontWeight: 'bold', fontSize: 25 }}>PASSWORD</Text>
+          </View>
+          <View
+            style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Text
+              style={{ fontWeight: 'bold', fontSize: 15, textAlign: 'center' }}>
+              Provide your account’s email for which you want to reset your
+              password
+            </Text>
+          </View>
+
+          <View
+            style={{
+              flex: 1,
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <Input
+              
+              placeholder="Email"
+              leftIcon={<MaterialIcons name="email" size={24} color="gray" />}
+            />
+          </View>
+        </View>
+        <View
+          style={{
+            flex: 1,
+            alignItems: 'center',
+            justifyContent: 'space-around',
+            flexDirection: 'row',
+          }}>
+          <TouchableOpacity style={styles.botton}>
+            <Text style={{ fontWeight: 'bold', fontSize: 20 }}>NEXT</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+      // --------------------------------
+      <View
+        style={{
+          flex: 1,
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}></View>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  botton: {
+    backgroundColor: '#e3c000',
+    height: 50,
+    width: 300,
+    margin: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  tinyLogo: {
+    width: 150,
+    height: 150,
+    resizeMode: 'contain', 
+  },
+});
+
+export default Bai3;

@@ -1,0 +1,125 @@
+import React from 'react';
+import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { Input } from 'react-native-elements';
+import { MaterialIcons, FontAwesome } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
+
+const Bai8 = () => {
+  return (
+    <View
+      style={{
+        flex: 1,
+      }}>
+      <View style={[styles.viewForm, { flex: 1 }]}>
+        <Image
+          style={{ width: 150, height: 150, resizeMode: 'contain' }}
+          source={{
+            uri: 'https://snack-code-uploads.s3.us-west-1.amazonaws.com/~asset/edfe13b9678a1ac64834245494247fcf',
+          }}
+        />
+      </View>
+
+      <View style={[styles.viewForm, { flex: 3 }]}>
+        <View style={[styles.viewForm, { flex: 1 }]}>
+          <Input
+            leftIcon={<FontAwesome name="user" size={24} color="blue" />}
+            placeholder="Please input user name"
+            style={[styles.inputForm, {}]}
+          />
+          <Input
+            leftIcon={<MaterialIcons name="password" size={24} color="blue" />}
+            placeholder="Please input password"
+            style={[styles.inputForm, {}]}
+          />
+        </View>
+
+        <View style={[styles.viewForm, { flex: 1 }]}>
+          <TouchableOpacity
+            style={{
+              borderRadius: 10,
+              height: 50,
+              width: 300,
+              backgroundColor: '#386ffc',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <Text style={{ fontSize: 20, color: 'white' }}> LOGIN </Text>
+          </TouchableOpacity>
+
+          <View
+            style={[
+              styles.viewForm,
+              {
+                flexDirection: 'row',
+                justifyContent: 'space-around',
+                width: 300,
+              },
+            ]}>
+            <Text style={{ fontSize: 15, color: '#000' }}> Register </Text>
+            <Text style={{ fontSize: 15, color: '#000' }}>
+              {' '}
+              Forgot password{' '}
+            </Text>
+          </View>
+        </View>
+ 
+      </View>
+      <View style={[styles.viewForm, { flex: 1 }]}>
+        <Text style={{ fontSize: 15, color: '#000' }}> Other Login Methods </Text>
+        <View
+          style={[
+            styles.viewForm,
+            {
+              flexDirection: 'row',
+              justifyContent: 'space-around',
+              width: 300,
+              marginTop: 10
+            },
+          ]}>
+          <Image
+            style={styles.imageStyles}
+            source={{
+              uri: 'https://snack-code-uploads.s3.us-west-1.amazonaws.com/~asset/e2c8a6f4cf1b4b6e74093eed0c709044',
+            }}
+          />
+          <Image
+            style={styles.imageStyles}
+            source={{
+              uri: 'https://snack-code-uploads.s3.us-west-1.amazonaws.com/~asset/9b54bcc70619a2ce6660f7bc27002612',
+            }}
+          />
+
+          <Image
+            style={styles.imageStyles}
+            source={{
+              uri: 'https://snack-code-uploads.s3.us-west-1.amazonaws.com/~asset/442bda16e5c2a87ada48e4a6be4c2e8e',
+            }}
+          />
+        </View>
+      </View>
+
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  viewForm: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  inputForm: {
+    width: 300,
+    height: 50,
+    margin: 15,
+    color: '#000',
+    outlineColor: '#000',
+    tintColor: '#000',
+  },
+
+  imageStyles:{ 
+    width: 80, height: 80, resizeMode: 'contain' 
+  }
+});
+
+export default Bai8;

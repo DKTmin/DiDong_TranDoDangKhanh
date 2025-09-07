@@ -1,0 +1,100 @@
+import React from 'react';
+import { Input } from 'react-native-elements';
+import { Link } from '@react-navigation/native';
+import {
+  Text,
+  View,
+  Image,
+  StyleSheet,
+  TouchableOpacity,
+  Linking,
+} from 'react-native';
+import { MaterialIcons, FontAwesome, AntDesign } from '@expo/vector-icons';
+
+const Bai5 = () => {
+  return (
+    <View style={{ flex: 1, backgroundColor: '#d8efdf' }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 25, fontWeight: 'bold' }}>LOGIN</Text>
+      </View>
+      -----
+      <View style={{ flex: 3 }}>
+        <View style={{ flex: 1 }}>
+          <Input placeholder="Email" style={{ marginTop: 50 }} />
+          <Input
+            placeholder="Password"
+            rightIcon={<MaterialIcons name="password" size={24} color="gray" />}
+            style={{ marginTop: 30 }}
+          />
+        </View>
+        --------------
+        <View style={{ flex: 1 }}>
+          <View
+            style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <TouchableOpacity
+              style={{
+                height: 50,
+                width: 300,
+                backgroundColor: '#c34e3b',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+              {' '}
+              <Text style={{ fontWeight: 'bold', fontSize: 15 }}> LOGIN </Text>
+            </TouchableOpacity>
+          </View>
+          ------------------------
+          <View
+            style={{ flex: 2, alignItems: 'center', justifyContent: 'center' }}>
+            <Text> When you agree to terms and conditions </Text>
+
+            <TouchableOpacity
+              style={{ margin: 20 }}
+              onPress={() => Linking.openURL('https://google.com')}>
+              <Text style={{ color: 'blue', textDecorationLine: 'underline' }}>
+                For got your password?
+              </Text>
+            </TouchableOpacity>
+
+            <Text> Or login with </Text>
+          </View>
+        </View>
+      </View>
+      ------
+      <View
+        style={{
+          flex: 1,
+          alignItems: 'center',
+          justifyContent: 'center',
+          flexDirection: 'row',
+        }}>
+        <View
+          style={[styles.iconFooter, {backgroundColor: '#275a8e'}]}>
+          <FontAwesome name="facebook" size={28} color="white" />{' '}
+        </View>
+        <View
+          style={[styles.iconFooter, {backgroundColor: '#1593c6'}]}>
+           <AntDesign name="message1" size={28} color="white" />
+          </View>
+        <View
+          style={[styles.iconFooter, {borderWidth: 2, borderColor: '#0e88d4'}]}>
+           <AntDesign name="google" size={28} color="#0e88d4" />
+          </View>
+      </View>
+    </View>
+  );
+};
+
+
+const styles = StyleSheet.create({
+  iconFooter: { 
+    borderRadius: 3,
+            width: 100,
+            height: 50,
+            justifyContent: 'center', 
+            alignItems: 'center'
+  }
+
+});
+
+export default Bai5;

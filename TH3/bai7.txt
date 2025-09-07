@@ -1,0 +1,92 @@
+import React from 'react';
+import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { Input } from 'react-native-elements';
+import { MaterialIcons, FontAwesome } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
+
+const Bai7 = () => {
+  return (
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: '#fbcb00',
+      }}>
+      <LinearGradient
+        colors={['#fbcb00', '#bf9a01']} // từ vàng sáng → vàng đậm
+        locations={[0, 1]} // 0 = trên cùng, 1 = dưới cùng
+        style={{
+          position: 'absolute',
+          left: 0,
+          right: 0,
+          top: 0,
+          bottom: 0,
+        }}
+      />
+      <View
+        style={[
+          styles.viewForm,
+          { flex: 1, alignItems: 'flex-start', left: 20 },
+        ]}>
+        <Text style={{ fontWeight: 'bold', fontSize: 30 }}> LOGIN </Text>
+      </View>
+
+      <View style={[styles.viewForm, { flex: 3 }]}>
+        <View style={[styles.viewForm, { flex: 1 }]}>
+          <Input
+            leftIcon={<FontAwesome name="user" size={28} color="black" />}
+            placeholder="Name"
+            placeholderTextColor="black"
+            style={[styles.inputForm, {}]}
+          />
+          <Input
+            rightIcon={
+              <MaterialIcons name="verified-user" size={24} color="black" />
+            }
+            leftIcon={<MaterialIcons name="password" size={24} color="black" />}
+            placeholder="Password"
+            placeholderTextColor="black"
+            style={[styles.inputForm, {}]}
+          />
+        </View>
+        <View style={[styles.viewForm, { flex: 1 }]}>
+          <TouchableOpacity
+            style={{
+              backgroundColor: '#000',
+              width: 300,
+              height: 50,
+              justifyContent: 'center',
+              alignItems: 'center',
+              borderRadius: 5,
+            }}>
+            <Text style={{ color: '#fff', fontWeight: 'bold', fontSize: 20 }}>
+              LOGIN
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+      <View style={[styles.viewForm, { flex: 1 }]}>
+        <Text style={{ color: '#000', fontWeight: 'bold', fontSize: 20 }}>
+          CREATE ACCOUNT
+        </Text>
+      </View>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  viewForm: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  inputForm: {
+    width: 300,
+    height: 50,
+    margin: 15,
+    color: '#000',
+    outlineColor: '#000',
+    tintColor: '#000',
+  },
+});
+
+export default Bai7;

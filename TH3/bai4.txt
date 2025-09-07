@@ -1,0 +1,131 @@
+import React from 'react';
+import { Input } from 'react-native-elements';
+import {
+  Text,
+  View,
+  Image,
+  StyleSheet,
+  TouchableOpacity,
+  TextInput,
+} from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+import { MaterialIcons } from '@expo/vector-icons';
+
+const Bai4 = () => {
+  return (
+    <View style={{ flex: 1, backgroundColor: '#08ccfc' }}>
+      <LinearGradient
+        colors={['rgba(255,255,255,0.8)', 'rgba(255,255,255,0.8)', '#08ccfc']}
+        locations={[0, 0.8, 1]}
+        style={{
+          position: 'absolute',
+          left: 0,
+          right: 0,
+          top: 0,
+          bottom: 0,
+        }}
+      />
+      <View style={{ flex: 2, alignItems: 'center', justifyContent: 'center' }}>
+        <Image
+          style={styles.tinyLogo}
+          source={{
+            uri: 'https://snack-code-uploads.s3.us-west-1.amazonaws.com/~asset/512d8e96ad7b17f5c868430dd1c44db8',
+          }}
+        />
+      </View>
+      // ------------------------------
+      <View
+        style={{
+          flex: 3,
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}>
+        <View
+          style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+          <View
+            style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Text style={{ fontWeight: 'bold', fontSize: 25 }}>
+              VERIFICATION
+            </Text>
+          </View>
+          <View
+            style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Text
+              style={{ fontWeight: 'bold', fontSize: 15, textAlign: 'center' }}>
+              Enter ontime password sent on
+            </Text>
+            <Text
+              style={{ fontWeight: 'bold', fontSize: 15, textAlign: 'center' }}>
+              ++849092605798
+            </Text>
+          </View>
+
+          <View
+            style={{
+              flex: 1,
+              alignItems: 'center',
+              justifyContent: 'space-around',
+              flexDirection: 'row',
+            }}>
+            <Text style={{ height: 50, width: 50, borderColor: '#000', borderWidth: 1.5 }}>
+              
+            </Text>
+            <Text style={{ height: 50, width: 50, borderColor: '#000', borderWidth: 1.5 }}>
+              
+            </Text>
+            <Text style={{ height: 50, width: 50, borderColor: '#000', borderWidth: 1.5 }}>
+            
+            </Text>
+            <Text style={{ height: 50, width: 50, borderColor: '#000', borderWidth: 1.5 }}>
+           
+            </Text>
+            <Text style={{ height: 50, width: 50, borderColor: '#000', borderWidth: 1.5 }}>
+           
+            </Text>
+            <Text style={{ height: 50, width: 50, borderColor: '#000', borderWidth: 1.5 }}>
+           
+            </Text>
+          </View>
+        </View>
+        <View
+          style={{
+            flex: 1,
+            alignItems: 'center',
+            justifyContent: 'space-around',
+            flexDirection: 'row',
+          }}>
+          <TouchableOpacity style={styles.botton}>
+            <Text style={{ fontWeight: 'bold', fontSize: 20 }}>
+              VERIFY CODE
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+      // --------------------------------
+      <View
+        style={{
+          flex: 1,
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}></View>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  botton: {
+    backgroundColor: '#e3c000',
+    height: 50,
+    width: 300,
+    margin: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  tinyLogo: {
+    width: 150,
+    height: 150,
+    resizeMode: 'contain',
+  },
+});
+
+export default Bai4;

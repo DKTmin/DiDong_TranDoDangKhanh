@@ -1,0 +1,93 @@
+import React from 'react';
+import { Input } from 'react-native-elements';
+import { Link } from '@react-navigation/native';
+import {
+  Text,
+  View,
+  Image,
+  StyleSheet,
+  TouchableOpacity,
+  Linking,
+} from 'react-native';
+import { MaterialIcons, FontAwesome, AntDesign } from '@expo/vector-icons';
+
+const Bai6 = () => {
+  return (
+    <View style={{ flex: 1, backgroundColor: '#d8efdf' }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 25, fontWeight: 'bold' }}>LOGIN</Text>
+      </View>
+      -----
+      <View style={{ flex: 3, justifyContent: 'center', alignItems: 'center' }}>
+        <Input placeholder="Name" style={styles.inputForm} />
+        <Input placeholder="Phone" style={styles.inputForm} />
+        <Input placeholder="Email" style={styles.inputForm} />
+        <Input
+          placeholder="Password"
+          rightIcon={<MaterialIcons name="password" size={24} color="gray" />}
+          style={styles.inputForm}
+        />
+        <Input placeholder="Birthday" style={styles.inputForm} />
+
+        <View style={{ flexDirection: 'row' }}>
+          <TouchableOpacity style={{ flexDirection: 'row', margin: 30 }}>
+            <View
+              style={{
+                width: 24,
+                height: 24,
+                borderColor: '#000',
+                borderWidth: 2,
+                borderRadius: 24,
+              }}></View>
+            <Text> Male </Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={{ flexDirection: 'row', margin: 30 }}>
+            <View
+              style={{
+                width: 24,
+                height: 24,
+                borderColor: '#000',
+                borderWidth: 2,
+                borderRadius: 24,
+              }}></View>
+            <Text> Female </Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+      ------
+      <View
+        style={{
+          flex: 1,
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}>
+        <TouchableOpacity
+          style={{
+            height: 50,
+            width: 300,
+            backgroundColor: '#c34e3b',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+          {' '}
+          <Text style={{ color: 'white', fontWeight: 'bold', fontSize: 15 }}>
+            {' '}
+            REGISTER{' '}
+          </Text>
+        </TouchableOpacity>
+        <Text style={{ marginTop: 20 }}>
+          {' '}
+          When you agree to terms and conditions{' '}
+        </Text>
+      </View>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  inputForm: {
+    margin: 10,
+  },
+});
+
+export default Bai6;
